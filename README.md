@@ -63,5 +63,7 @@ jupyter notebook Telecom_churn_prediction.ipynb
 
 Follow the cells to preprocess the data, train the models, and view predictions.
 
+## References 
+https://www.kaggle.com/competitions/customer-churn-prediction-2020
 
   
