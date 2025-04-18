@@ -154,6 +154,18 @@ Gradient Boosting performed nearly as well as Random Forest, with better recall 
 <img width="900" alt="model_performance" src="https://github.com/user-attachments/assets/6307d68b-c33d-4855-89ca-2cd2c747c56a" />
 
 
+## Test Data on Random Forest Model
+
+Random Forest outperformed all other models on the training set and was chosen for final evaluation on the test data. It generalized well and maintained high performance. The results show a healthy balance of conservatism (fewer false positives) and sensitivity (still catching many churners). This makes it a strong candidate for real-world deployment.
+
+**Test Set Prediction Summary:**  
+- The model was applied to the unseen test dataset (test.csv).  
+- **86.3%** of customers were predicted **not to churn**.  
+- **13.7%** were predicted **to churn**.
+
+
+![test_result](https://github.com/user-attachments/assets/9181d82a-d2f7-479a-8669-e919d51217d0)
+
 ## 🛠️ How to Run
 
 Clone this repo:
