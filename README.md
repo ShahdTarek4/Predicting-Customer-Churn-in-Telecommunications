@@ -43,6 +43,117 @@ The models are evaluated using:
 - Confusion Matrix
 - ROC Curve and AUC
 
+## 📊 Model Performance Analysis
+
+This section explains each model used in the project, its working principles, and how well it performed based on evaluation metrics.
+
+### 🔹 Logistic Regression
+
+**About:**  
+A linear model that predicts the probability of a binary outcome using the logistic function. It's easy to interpret and often used as a baseline model.
+
+**Performance:**  
+- Accuracy: **72%**  
+- Precision: **30%**  
+- Recall: **76%**  
+- F1 Score: **43%**  
+- AUC-ROC: **0.80**
+
+**Analysis:**  
+Logistic Regression achieved a high recall but extremely low precision. This means it correctly identified many churn cases but also flagged many non-churn customers incorrectly (false positives). It's a poor choice if precision is important (e.g., to avoid targeting the wrong customers), but its high recall could be useful when it's more important not to miss churners.
+
+---
+
+### 🔹 Decision Tree Classifier
+
+**About:**  
+A tree-based model that splits data based on feature values to make decisions. It’s easy to visualize and interpret.
+
+**Performance:**  
+- Accuracy: **87%**  
+- Precision: **53%**  
+- Recall: **74%**  
+- F1 Score: **62%**  
+- AUC-ROC: **0.84**
+
+**Analysis:**  
+The decision tree showed solid recall but mediocre precision. While it’s better than logistic regression in most aspects, it tends to overfit if not pruned or regularized. The model can be useful for initial understanding, but better generalization is needed for production.
+
+---
+
+### 🔹 Random Forest Classifier
+
+**About:**  
+An ensemble model that builds multiple decision trees and averages their outputs to improve generalization and reduce overfitting.
+
+**Performance:**  
+- Accuracy: **94%**  
+- Precision: **82%**  
+- Recall: **76%**  
+- F1 Score: **79%**  
+- AUC-ROC: **0.91**
+
+**Analysis:**  
+Random Forest outperformed all other models across nearly all metrics. It balances precision and recall well and provides excellent overall performance. This model is robust, handles feature interactions automatically, and is suitable for deployment in a real-world system.
+
+---
+
+### 🔹 Support Vector Machine (SVM)
+
+**About:**  
+SVM tries to find the best hyperplane that separates classes. It performs well on high-dimensional data and can use kernels to model non-linear decision boundaries.
+
+**Performance:**  
+- Accuracy: **88%**  
+- Precision: **56%**  
+- Recall: **63%**  
+- F1 Score: **59%**  
+- AUC-ROC: **0.86**
+
+**Analysis:**  
+SVM achieved decent accuracy but had lower precision and recall compared to Random Forest or Gradient Boosting. It’s computationally more intensive and requires careful feature scaling. Overall, it’s a fair performer but not the best for this dataset.
+
+---
+
+### 🔹 Naive Bayes
+
+**About:**  
+A probabilistic model based on Bayes' Theorem with the assumption of feature independence. It’s simple, fast, and works surprisingly well on some problems.
+
+**Performance:**  
+- Accuracy: **63%**  
+- Precision: **25%**  
+- Recall: **80%**  
+- F1 Score: **38%**  
+- AUC-ROC: **0.80**
+
+**Analysis:**  
+Naive Bayes had the highest recall after Gradient Boosting but extremely low precision and F1 score. It misclassified many non-churners as churners. Its naive assumptions limit its effectiveness in this scenario where feature relationships matter.
+
+---
+
+### 🔹 Gradient Boosting Classifier
+
+**About:**  
+An advanced ensemble technique that builds models sequentially, where each new model focuses on correcting the errors of the previous ones. It often yields top performance.
+
+**Performance:**  
+- Accuracy: **91%**  
+- Precision: **63%**  
+- Recall: **82%**  
+- F1 Score: **71%**  
+- AUC-ROC: **0.92**
+
+**Analysis:**  
+Gradient Boosting performed nearly as well as Random Forest, with better recall and AUC but slightly lower precision. It’s an excellent choice when you want to capture more churners and can tolerate a few false positives. With hyperparameter tuning, this model can potentially outperform all others.
+
+---
+
+## Model Performance Comparison
+
+<img width="900" alt="model_performance" src="https://github.com/user-attachments/assets/6307d68b-c33d-4855-89ca-2cd2c747c56a" />
+
+
 ## 🛠️ How to Run
 
 Clone this repo:
