@@ -47,8 +47,8 @@ The models are evaluated using:
 
 Clone this repo:
 ```bash
-git clone https://github.com/ShahdTarek4/telecom-churn-prediction.git
-cd telecom-churn-prediction
+git clone https://github.com/ShahdTarek4/Predicting-Customer-Churn-in-Telecommunications.git
+cd Predicting-Customer-Churn-in-Telecommunications
 ```
 
 Install required dependencies:
